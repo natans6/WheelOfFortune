@@ -23,7 +23,13 @@ public class WheelOfFortune {
     }
 
     public void runGame(){
+        System.out.println("Game Host: What is your name? ");
+        String name = scanner.nextLine();
+        Player player = new Player(name, 3);
+        System.out.print("Game Host: Well " + player.getName() + ", I wish you good luck in finding your true worth and fortune!");
+        System.out.println(" You will have a total of " + Colors.getAnsiPurple() + player.getLives() + Colors.getAnsiReset() + " lives to reach the fortune...");
         for (round = 1; round < 13; round++){
+            System.out.println("╰── ⋅ ⋅ ── ✩ ── ⋅ ⋅ ──╯");
             boolean ready = false;
             System.out.println(Colors.getAnsiPurple() + "Round " + round  +  " is now commencing..." + Colors.getAnsiReset());
             setPhraseFound();
