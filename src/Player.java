@@ -19,4 +19,7 @@ public class Player {
     public void  increaseLives(){
         lives++;
     }
+    public String showLives(){
+        return name + " has " + lives + " lives!";
+    }
 }
